@@ -2,11 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Kadanoff-Baym equations with pytorch/index.html",
+      "/posts/jupyter_notebook/index.html",
       "/posts/welcome/index.html",
-      "/posts/Path_library/test.html",
-      "/posts/Kaggle/index.html",
-      "/posts/Jupyter notebook/index.html"
+      "/posts/path_library/test.html"
     ]
   }
 ]
