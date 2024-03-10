@@ -9,7 +9,7 @@
 <meta name="author" content="Valentin Kasper">
 <meta name="dcterms.date" content="2024-02-27">
 
-<title>blog - Small introduction to the pathlib library</title>
+<title>blog - The pathlib library</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -153,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Small introduction to the pathlib library</h1>
+      <h1 class="title">The pathlib library</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">news</div>
               </div>
@@ -209,68 +209,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="current-working-directory" class="level3">
 <h3 class="anchored" data-anchor-id="current-working-directory">Current working directory</h3>
 <p>You can use the <strong><code>pathlib</code></strong> module to get the current working directory in Python. Here is an example:</p>
-<div id="cell-3" class="cell" data-execution_count="1">
+<div id="cell-3" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the current working directory</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>cwd <span class="op">=</span> Path.cwd()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cwd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>/home/vkasper/Projects/blog/posts/Path_library</code></pre>
-</div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>cwd <span class="op">=</span> Path.cwd() <span class="co"># Get the current working directory</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cwd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="create-files-with-pathlib" class="level3">
-<h3 class="anchored" data-anchor-id="create-files-with-pathlib">Create files with pathlib</h3>
-<p>To create a new file using <strong><code>pathlib</code></strong>, you can use the <strong><code>Path.touch()</code></strong> method, which creates a file at a specified path. If the file already exists, <strong><code>touch()</code></strong> will update its modification time, similar to the Unix <strong><code>touch</code></strong> command. Here is an example:</p>
-<div id="cell-5" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new Path object for the new file</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>new_file <span class="op">=</span> Path(<span class="st">'new_file.txt'</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(new_file) <span class="co"># relative path</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(new_file.absolute()) <span class="co"># absolute path</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the file</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>new_file.touch(exist_ok<span class="op">=</span><span class="va">True</span>) <span class="co"># The 'exist_ok' parameter avoids error if file already exists</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>new_file.txt
-/home/vkasper/Projects/blog/posts/Path_library/new_file.txt</code></pre>
-</div>
-</div>
-</section>
-<section id="remove-a-file-using-pathlib" class="level3">
-<h3 class="anchored" data-anchor-id="remove-a-file-using-pathlib">Remove a file using pathlib</h3>
-<p>To remove a file using the <strong><code>pathlib</code></strong> library in Python, you would use the <code>unlink()</code> method provided by the <strong><code>Path</code></strong> class. Here is how you can do it:</p>
-<div id="cell-7" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a Path object for the file you want to remove</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>file_to_remove <span class="op">=</span> Path(<span class="st">'new_file.txt'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Let us see the current working directory and the content of the current working directory</p>
-<div id="cell-9" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pwd</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>ls <span class="op">-</span>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>/home/vkasper/Projects/blog/posts/Path_library
-.  ..  new_file.txt  test.ipynb  thumbnail.jpg</code></pre>
-</div>
+<section id="relative-and-absolute-file-path" class="level3">
+<h3 class="anchored" data-anchor-id="relative-and-absolute-file-path">Relative and absolute file path</h3>
+<p>You can also use the <strong><code>pathlib</code></strong> module to to get the relative and absolut path</p>
+<div id="cell-5" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>abspath <span class="op">=</span> cwd.absolute() <span class="co"># absolute path</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(abspath)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="change-directories-using-pathlib" class="level3">
 <h3 class="anchored" data-anchor-id="change-directories-using-pathlib">Change directories using pathlib</h3>
 <p>The <strong><code>pathlib</code></strong> module does not directly support changing the current working directory. However, you can combine <strong><code>pathlib</code></strong> with the <strong><code>os</code></strong> module to change the directories. Here we show how to move one directory up and how to move to the home directory.</p>
-<div id="cell-11" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Path.cwd())</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>new_directory <span class="op">=</span> Path(<span class="st">'..'</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>os.chdir(new_directory)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Path.cwd())</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>home_directory <span class="op">=</span> Path.home()</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>os.chdir(home_directory)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Path.cwd())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>/home/vkasper/Projects/blog
-/home/vkasper/Projects
-/home/vkasper</code></pre>
+<div id="cell-7" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Path.cwd()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>new_directory <span class="op">=</span> Path(<span class="st">'..'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>os.chdir(new_directory)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>home_directory <span class="op">=</span> Path.home()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>os.chdir(home_directory)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="creating-files" class="level3">
+<h3 class="anchored" data-anchor-id="creating-files">Creating files</h3>
+<p>To create a new file using <strong><code>pathlib</code></strong>, you can use the <strong><code>Path.touch()</code></strong> method, which creates a file at a specified path. If the file already exists, <strong><code>touch()</code></strong> will update its modification time, similar to the Unix <strong><code>touch</code></strong> command. Here is an example:</p>
+</section>
+<section id="removing-files" class="level3">
+<h3 class="anchored" data-anchor-id="removing-files">Removing files</h3>
+<p>To remove a file using the <strong><code>pathlib</code></strong> library in Python, you would use the <code>unlink()</code> method provided by the <strong><code>Path</code></strong> class. Here is how you can do it:</p>
+<div id="cell-10" class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a Path object for the file you want to remove</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>file_to_remove <span class="op">=</span> Path(<span class="st">'new_file.txt'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

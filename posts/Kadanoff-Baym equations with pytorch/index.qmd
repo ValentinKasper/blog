@@ -1,9 +1,0 @@
----
-title: "Kadanoff-Baym equations with pytorch"
-author: "Valentin Kasper"
-date: "2024-03-01"
-categories: [news, code, analysis]
-image: "image.jpg"
----
-
-This is a post with executable code.
