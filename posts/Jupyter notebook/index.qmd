@@ -1,0 +1,92 @@
+---
+title: "Welcome To My Blog"
+author: "Valentin Kasper"
+date: "2024-02-27"
+categories: [news]
+---
+
+This post is about jupyter notebooks.
+
+![](thumbnail.jpg)
+
+## What is a Jupyter notebook?
+
+A Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text. Uses for Jupyter Notebooks include data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.
+
+Here are some key features and aspects of Jupyter Notebooks:
+
+1. Interactive Coding: You can write and execute code in an interactive environment. Jupyter supports over 40 programming languages, including Python, R, Julia, and Scala. Code can be organized into separate, executable cells.
+
+2. Data Visualization: Jupyter Notebooks support integration with data visualization libraries such as Matplotlib, Seaborn, ggplot2, and others, allowing you to create inline charts and graphs with just a few lines of code.
+
+3. Markdown Integration: Notebooks support Markdown, allowing you to include formatted text, links, lists, and images alongside your code to create a fully documented and self-explanatory document.
+
+4. Equation Rendering: They support LaTeX for adding mathematical notation to the documents, making them popular in academic settings for sharing and explaining complex mathematical concepts.
+
+5. Extension and Widgets: Jupyter Notebooks can be extended with widgets that enable interactive data manipulation and visualization, enhancing the interactive data science and analysis experience.
+
+6. Sharing and Collaboration: Notebooks can be easily shared between users or publicly, allowing for collaboration on data science projects. They can be exported in formats like PDF, HTML, and Markdown.
+
+7. Integration with Data Science Tools: Jupyter Notebooks integrate seamlessly with big data tools and platforms. They can be used in combination with data sources, machine learning libraries, and other computational tools.
+
+Jupyter Notebooks are widely used in academic research, education, data analysis, and machine learning projects. They have become a standard tool for data scientists, researchers, and analysts for data exploration, visualization, and comprehensive documentation of the workflow.
+
+## Working modes
+
+Jupyter notebook has two woking modes Command mode and Edit mode. 
+
+## Short cuts for Jupyter notebook
+
+Command Mode (press Esc to activate):
+
+1. **Shift + Enter**: Run the current cell, select below.
+
+2. **Ctrl + Enter**: Run selected cells.
+
+3. **Alt + Enter**: Run the current cell and insert a new one below.
+
+4. **Y**: Change the cell type to Code.
+
+5. **M**: Change the cell type to Markdown.
+
+6. **A**: Insert a new cell above the current cell.
+
+7. **B**: Insert a new cell below the current cell.
+
+8. **D, D** (press the key twice): Delete the selected cell.
+
+9. **Z**: Undo cell deletion.
+
+10. **L**: Toggle line numbers.
+
+11. **Shift + M**: Merge selected cells, or current cell with cell below if only one cell is selected.
+
+12. **S**: Save and checkpoint.
+
+13. **Up Arrow or K**: Select the cell above.
+
+14. **Down Arrow or J**: Select the cell below.
+
+Edit Mode (press Enter to activate):
+
+1. **Shift + Enter**: Run the current cell and move to the next one.
+
+2. **Ctrl + Enter**: Run the current cell.
+
+3. **Alt + Enter**: Run the current cell and insert a new one below.
+
+4. **Ctrl + Shift + -**: Split the current cell into two at the cursor.
+
+5. **Ctrl + Z**: Undo last text change.
+
+6. **Ctrl + Shift + Z** or **Ctrl + Y**: Redo last text change.
+
+7. **Tab**: Code completion or indent.
+
+8. **Shift + Tab**: Tooltip (help for the code).
+
+9. **Ctrl + ]**: Indent selected lines.
+
+10. **Ctrl + [**: Dedent selected lines.
+
+11. **Esc**: Switch to Command mode.

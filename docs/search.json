@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "bio.html",
+    "href": "bio.html",
+    "title": "bio",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/Kadanoff-Baym equations with pytorch/index.html",
+    "href": "posts/Kadanoff-Baym equations with pytorch/index.html",
+    "title": "Kadanoff-Baym equations with pytorch",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/Kaggle/index.html",
+    "href": "posts/Kaggle/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Welcome in this post I write about Kaggle.\n\n\nWhat is Kaggle?\nKaggle is an online platform that hosts data science and machine learning competitions. It was founded in 2010 and later acquired by Google in 2017. Kaggle provides a comprehensive environment for data scientists and machine learning practitioners to access a wide variety of datasets, run and share data analysis and modeling code, and enter competitions to solve data science challenges.\nHere are some key features of Kaggle:\n\nCompetitions: Kaggle is well-known for its competitions, where organizations and researchers post data and problems, ranging from predictive modeling to analytics challenges. Participants can submit solutions and are ranked on a leaderboard based on their model’s performance. Competitions often come with cash prizes and can range from beginner to expert level.\nDatasets: Kaggle hosts a large repository of datasets uploaded by users and organizations. These datasets can be used for personal projects, educational purposes, or to enter Kaggle’s own competitions. The datasets cover a wide range of domains, including economics, biology, and film industry analytics.\nKernels: Kernels are code notebooks on Kaggle that allow users to write, run, and share Python and R code. They provide an integrated environment based on Jupyter Notebooks, which supports data analysis and machine learning in an interactive, web-based format. Kernels can be public for community sharing or private for personal use.\nCourses: Kaggle also offers free “Micro-Courses” that cover various data science and machine learning topics. These courses are designed to teach skills such as Python programming, machine learning, deep learning, data visualization, and more.\nDiscussion Forums: Kaggle includes forums where users can discuss data science topics, share insights, ask questions, and collaborate with each other. These forums are a valuable resource for learning and getting help from the community.\nPublic API: Kaggle provides a public API that allows users to interact with Kaggle’s features programmatically, enabling tasks such as downloading datasets, managing kernels, and participating in competitions.\n\n\n\nHow to use Kaggle?\nIt could not be simpler. You go to Kaggle. Sign up and you are ready to go. is"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "blog",
+    "section": "",
+    "text": "Kadanoff-Baym equations with pytorch\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 1, 2024\n\n\nValentin Kasper\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 27, 2024\n\n\nValentin Kasper\n\n\n\n\n\n\n\n\n\n\n\n\nSmall introduction to the pathlib library\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 27, 2024\n\n\nValentin Kasper\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 27, 2024\n\n\nValentin Kasper\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 27, 2024\n\n\nValentin Kasper\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Path_library/test.html",
+    "href": "posts/Path_library/test.html",
+    "title": "Small introduction to the pathlib library",
+    "section": "",
+    "text": "The pathlib library in Python is a standard utility for object-oriented file system path operations. It provides an easy-to-use interface for working with file system paths, making code that involves file and directory access more readable and Pythonic compared to the older os.path module.\nHere’s a breakdown of some key features and benefits of pathlib:\n\nObject-Oriented Interface: pathlib introduces the Path object, which wraps file system paths as objects allowing for method calls and attribute access. This is a shift from the traditional string-based handling of file paths, enabling more intuitive and human-readable code.\nPath Manipulation: With pathlib, you can perform common path manipulations like joining paths, splitting file extensions, and checking the existence of files or directories directly through methods of Path objects. For example, Path(‘/usr/local’) / ‘bin’ creates a new path by joining parts, which is more readable and eliminates the need for functions like os.path.join.\nFile System Operations: Beyond path manipulation, pathlib offers methods to perform higher-level file system operations like reading from, writing to, and deleting files. This simplifies the code as you don’t need to import additional modules like os or shutil for basic file operations.\nPortability and Compatibility: Paths represented by Path objects are automatically converted to the correct format for the operating system Python is running on. This means you can write code that is portable across OSes without worrying about the differences in file system path conventions.\nGlobbing: The library provides built-in support for glob patterns, allowing you to list files under a directory matching a specific pattern directly through the Path object’s methods, like glob or rglob.\n\n\n\n\nYou can use the pathlib module to get the current working directory in Python. Here is an example:\n\nfrom pathlib import Path\n\n# Get the current working directory\ncwd = Path.cwd()\nprint(cwd)\n\n/home/vkasper/Projects/blog/posts/Path_library\n\n\n\n\n\nTo create a new file using pathlib, you can use the Path.touch() method, which creates a file at a specified path. If the file already exists, touch() will update its modification time, similar to the Unix touch command. Here is an example:\n\n# Create a new Path object for the new file\nnew_file = Path('new_file.txt')\nprint(new_file) # relative path\nprint(new_file.absolute()) # absolute path\n# Create the file\nnew_file.touch(exist_ok=True) # The 'exist_ok' parameter avoids error if file already exists\n\nnew_file.txt\n/home/vkasper/Projects/blog/posts/Path_library/new_file.txt\n\n\n\n\n\nTo remove a file using the pathlib library in Python, you would use the unlink() method provided by the Path class. Here is how you can do it:\n\n# Create a Path object for the file you want to remove\nfile_to_remove = Path('new_file.txt')\n\nLet us see the current working directory and the content of the current working directory\n\n!pwd\n!ls -a\n\n/home/vkasper/Projects/blog/posts/Path_library\n.  ..  new_file.txt  test.ipynb  thumbnail.jpg\n\n\n\n\n\nThe pathlib module does not directly support changing the current working directory. However, you can combine pathlib with the os module to change the directories. Here we show how to move one directory up and how to move to the home directory.\n\nimport os\n\nprint(Path.cwd())\nnew_directory = Path('..')\nos.chdir(new_directory)\nprint(Path.cwd())\nhome_directory = Path.home()\nos.chdir(home_directory)\nprint(Path.cwd())\n\n/home/vkasper/Projects/blog\n/home/vkasper/Projects\n/home/vkasper"
+  },
+  {
+    "objectID": "posts/Path_library/test.html#the-pathlib---library",
+    "href": "posts/Path_library/test.html#the-pathlib---library",
+    "title": "Small introduction to the pathlib library",
+    "section": "",
+    "text": "The pathlib library in Python is a standard utility for object-oriented file system path operations. It provides an easy-to-use interface for working with file system paths, making code that involves file and directory access more readable and Pythonic compared to the older os.path module.\nHere’s a breakdown of some key features and benefits of pathlib:\n\nObject-Oriented Interface: pathlib introduces the Path object, which wraps file system paths as objects allowing for method calls and attribute access. This is a shift from the traditional string-based handling of file paths, enabling more intuitive and human-readable code.\nPath Manipulation: With pathlib, you can perform common path manipulations like joining paths, splitting file extensions, and checking the existence of files or directories directly through methods of Path objects. For example, Path(‘/usr/local’) / ‘bin’ creates a new path by joining parts, which is more readable and eliminates the need for functions like os.path.join.\nFile System Operations: Beyond path manipulation, pathlib offers methods to perform higher-level file system operations like reading from, writing to, and deleting files. This simplifies the code as you don’t need to import additional modules like os or shutil for basic file operations.\nPortability and Compatibility: Paths represented by Path objects are automatically converted to the correct format for the operating system Python is running on. This means you can write code that is portable across OSes without worrying about the differences in file system path conventions.\nGlobbing: The library provides built-in support for glob patterns, allowing you to list files under a directory matching a specific pattern directly through the Path object’s methods, like glob or rglob.\n\n\n\n\nYou can use the pathlib module to get the current working directory in Python. Here is an example:\n\nfrom pathlib import Path\n\n# Get the current working directory\ncwd = Path.cwd()\nprint(cwd)\n\n/home/vkasper/Projects/blog/posts/Path_library\n\n\n\n\n\nTo create a new file using pathlib, you can use the Path.touch() method, which creates a file at a specified path. If the file already exists, touch() will update its modification time, similar to the Unix touch command. Here is an example:\n\n# Create a new Path object for the new file\nnew_file = Path('new_file.txt')\nprint(new_file) # relative path\nprint(new_file.absolute()) # absolute path\n# Create the file\nnew_file.touch(exist_ok=True) # The 'exist_ok' parameter avoids error if file already exists\n\nnew_file.txt\n/home/vkasper/Projects/blog/posts/Path_library/new_file.txt\n\n\n\n\n\nTo remove a file using the pathlib library in Python, you would use the unlink() method provided by the Path class. Here is how you can do it:\n\n# Create a Path object for the file you want to remove\nfile_to_remove = Path('new_file.txt')\n\nLet us see the current working directory and the content of the current working directory\n\n!pwd\n!ls -a\n\n/home/vkasper/Projects/blog/posts/Path_library\n.  ..  new_file.txt  test.ipynb  thumbnail.jpg\n\n\n\n\n\nThe pathlib module does not directly support changing the current working directory. However, you can combine pathlib with the os module to change the directories. Here we show how to move one directory up and how to move to the home directory.\n\nimport os\n\nprint(Path.cwd())\nnew_directory = Path('..')\nos.chdir(new_directory)\nprint(Path.cwd())\nhome_directory = Path.home()\nos.chdir(home_directory)\nprint(Path.cwd())\n\n/home/vkasper/Projects/blog\n/home/vkasper/Projects\n/home/vkasper"
+  },
+  {
+    "objectID": "posts/Jupyter notebook/index.html",
+    "href": "posts/Jupyter notebook/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This post is about jupyter notebooks."
+  },
+  {
+    "objectID": "posts/Jupyter notebook/index.html#what-is-a-jupyter-notebook",
+    "href": "posts/Jupyter notebook/index.html#what-is-a-jupyter-notebook",
+    "title": "Welcome To My Blog",
+    "section": "What is a Jupyter notebook?",
+    "text": "What is a Jupyter notebook?\nA Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text. Uses for Jupyter Notebooks include data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.\nHere are some key features and aspects of Jupyter Notebooks:\n\nInteractive Coding: You can write and execute code in an interactive environment. Jupyter supports over 40 programming languages, including Python, R, Julia, and Scala. Code can be organized into separate, executable cells.\nData Visualization: Jupyter Notebooks support integration with data visualization libraries such as Matplotlib, Seaborn, ggplot2, and others, allowing you to create inline charts and graphs with just a few lines of code.\nMarkdown Integration: Notebooks support Markdown, allowing you to include formatted text, links, lists, and images alongside your code to create a fully documented and self-explanatory document.\nEquation Rendering: They support LaTeX for adding mathematical notation to the documents, making them popular in academic settings for sharing and explaining complex mathematical concepts.\nExtension and Widgets: Jupyter Notebooks can be extended with widgets that enable interactive data manipulation and visualization, enhancing the interactive data science and analysis experience.\nSharing and Collaboration: Notebooks can be easily shared between users or publicly, allowing for collaboration on data science projects. They can be exported in formats like PDF, HTML, and Markdown.\nIntegration with Data Science Tools: Jupyter Notebooks integrate seamlessly with big data tools and platforms. They can be used in combination with data sources, machine learning libraries, and other computational tools.\n\nJupyter Notebooks are widely used in academic research, education, data analysis, and machine learning projects. They have become a standard tool for data scientists, researchers, and analysts for data exploration, visualization, and comprehensive documentation of the workflow."
+  },
+  {
+    "objectID": "posts/Jupyter notebook/index.html#working-modes",
+    "href": "posts/Jupyter notebook/index.html#working-modes",
+    "title": "Welcome To My Blog",
+    "section": "Working modes",
+    "text": "Working modes\nJupyter notebook has two woking modes Command mode and Edit mode."
+  },
+  {
+    "objectID": "posts/Jupyter notebook/index.html#short-cuts-for-jupyter-notebook",
+    "href": "posts/Jupyter notebook/index.html#short-cuts-for-jupyter-notebook",
+    "title": "Welcome To My Blog",
+    "section": "Short cuts for Jupyter notebook",
+    "text": "Short cuts for Jupyter notebook\nCommand Mode (press Esc to activate):\n\nShift + Enter: Run the current cell, select below.\nCtrl + Enter: Run selected cells.\nAlt + Enter: Run the current cell and insert a new one below.\nY: Change the cell type to Code.\nM: Change the cell type to Markdown.\nA: Insert a new cell above the current cell.\nB: Insert a new cell below the current cell.\nD, D (press the key twice): Delete the selected cell.\nZ: Undo cell deletion.\nL: Toggle line numbers.\nShift + M: Merge selected cells, or current cell with cell below if only one cell is selected.\nS: Save and checkpoint.\nUp Arrow or K: Select the cell above.\nDown Arrow or J: Select the cell below.\n\nEdit Mode (press Enter to activate):\n\nShift + Enter: Run the current cell and move to the next one.\nCtrl + Enter: Run the current cell.\nAlt + Enter: Run the current cell and insert a new one below.\nCtrl + Shift + -: Split the current cell into two at the cursor.\nCtrl + Z: Undo last text change.\nCtrl + Shift + Z or Ctrl + Y: Redo last text change.\nTab: Code completion or indent.\nShift + Tab: Tooltip (help for the code).\nCtrl + ]: Indent selected lines.\nCtrl + [: Dedent selected lines.\nEsc: Switch to Command mode."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  }
+]
